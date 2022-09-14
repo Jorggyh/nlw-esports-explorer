@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 62.5%; /* 10px = 1rem */
+}
+
+:root {
+	--card-bg: #2a2634;
+	--border-dark: #443e54;
+	--white: white;
+	--paragraph: #a1a1aa;
+}
+
+body {
+	min-height: 100vh;
+	height: 100%;
+	display: grid;
+	justify-content: center;
+	font-family: 'Inter', sans-serif;
+	background: top center/100% auto no-repeat url('img/background.png') #111114;
+	padding: 3.2rem 0 8rem;
+}
+
+body::after {
+	content: url('./img/logo.svg');
+	position: absolute;
+	left: 50%;
+	translate: -50%;
+	z-index: -1;
+}
+
+header {
+	display: flex;
+	height: 12rem;
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+
+picture {
+	width: 12rem;
+	height: 12rem;
+	position: relative;
+}
+
+header img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+picture::before {
+	content: '';
+	display: flex;
+	position: absolute;
+	top: -0.4rem;
+	left: -0.4rem;
+	width: 12.8rem;
+	height: 12.8rem;
+	border-radius: 50%;
+	z-index: -1;
+	background: linear-gradient(90deg, #9572fc, #43e7ad, #e2d45c);
+}
+
+.card {
+	max-width: 58rem;
+	width: 100%;
+	background-color: var(--card-bg);
+	padding: 2.4rem 3.2rem 3.2rem;
+	border-radius: 0.8rem;
+	position: relative;
+}
+
+.card::before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	display: block;
+	width: 100%;
+	height: 10rem;
+	top: -0.5rem;
+	left: 0;
+	border-radius: 1.3rem;
+	background: linear-gradient(90deg, #9572fc, #43e7ad, #e2d45c);
+}
+
+header + .card {
+	margin-top: 3.2rem;
+}
+
+.card + .card {
+	margin-top: 2.4rem;
+}
+
+h1,
+h2 {
+	font-size: 2.4rem;
+	color: var(--white);
+	font-weight: 900;
+	line-height: 3.8rem;
+	letter-spacing: -0.47px;
+}
+
+p {
+	font-size: 16px;
+	line-height: 2.6rem;
+	letter-spacing: -0.18px;
+	color: var(--paragraph);
+}
+
+main img {
+	width: 90px;
+	height: 120px;
+	border-radius: 8px;
+}
+
+ul {
+	list-style: none;
+	display: flex;
+	gap: 1.6rem;
+	margin-top: 2.4rem;
+	flex-wrap: wrap;
+}
+
+section img {
+	width: 7rem;
+	height: 7rem;
+	border: 0.1rem solid var(--border-dark);
+	border-radius: 50%;
+}
